@@ -55,10 +55,6 @@ for (let activeLink of activeLinks) {
 const activeArticles = document.querySelectorAll('.post.active');
 
 for (let activeArticle of activeArticles) {
-  activeArticle.classList.remove('active');
-}
-
-for (let activeArticle of activeArticles) {
 activeArticle.classList.remove('active');
     }
   /* get 'href' attribute from the clicked link */
