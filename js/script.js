@@ -40,6 +40,12 @@ function generateTitleLinks() {
 
 titleList.innerHTML = html;
 
+const links = document.querySelectorAll(optTitleListSelector + ' a');
+
+for (let link of links) {
+  link.addEventListener('click', titleClickHandler);
+}
+
 }
 
 const titleClickHandler = function(event) {
@@ -78,9 +84,3 @@ activeArticle.classList.remove('active');
 };
 
 generateTitleLinks();
-
-const links = document.querySelectorAll('.titles a');
-
-for (let link of links) {
-  link.addEventListener('click', titleClickHandler);
-}
