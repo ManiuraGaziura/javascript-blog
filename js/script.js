@@ -4,6 +4,10 @@ const optArticleSelector = '.post';
 const optTitleSelector = '.post-title';
 const optTitleListSelector = '.titles';
 
+function generateTitleLinks() {
+  console.log('generateTitleLinks was run');
+}
+
 const titleClickHandler = function(event) {
   event.preventDefault();
 
@@ -42,6 +46,8 @@ activeArticle.classList.remove('active');
   /* add class 'active' to the correct article */
   targetArticle.classList.add('active');
 };
+
+generateTitleLinks();
 
 const links = document.querySelectorAll('.titles a');
 
