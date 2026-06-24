@@ -6,6 +6,10 @@ const optTitleListSelector = '.titles';
 
 function generateTitleLinks() {
   console.log('generateTitleLinks was run');
+
+  /* remove titles */
+  const titleList = document.querySelector(optTitleListSelector);
+  titleList.innerHTML = '';
 }
 
 const titleClickHandler = function(event) {
