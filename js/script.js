@@ -30,3 +30,13 @@ const links = document.querySelectorAll('.titles a');
 for (const link of links) {
   link.addEventListener('click', titleClickHandler);
 }
+
+function testLinksHandler() {
+  const links = document.querySelectorAll('.titles a');
+
+  console.log(links);
+}
+
+const buttonTest = document.getElementById('button-test');
+
+buttonTest.addEventListener('click', testLinksHandler);
