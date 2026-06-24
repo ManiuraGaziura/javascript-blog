@@ -13,7 +13,23 @@ function generateTitleLinks() {
 
   /* for each article */
   const articles = document.querySelectorAll(optArticleSelector);
-  console.log(articles);
+
+  for (let article of articles) {
+    /* get article id */
+    const articleId = article.getAttribute('id');
+
+    /* find title */
+    const articleTitle = article.querySelector(optTitleSelector);
+
+    /* get title*/
+    const title = articleTitle.innerHTML;
+
+    /* create HTML link */
+    const linkHTML = '<li><a href="#' + articleId + '"><span>' + title + '</span></a></li>';
+
+    /* link into title */
+    titleList.innerHTML = titleList.innerHTML + linkHTML;
+  }
 }
 
 const titleClickHandler = function(event) {
