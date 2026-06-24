@@ -14,6 +14,8 @@ function generateTitleLinks() {
   /* for each article */
   const articles = document.querySelectorAll(optArticleSelector);
 
+  let html = '';
+
   for (let article of articles) {
     /* get article id */
     const articleId = article.getAttribute('id');
@@ -28,8 +30,16 @@ function generateTitleLinks() {
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + title + '</span></a></li>';
 
     /* link into title */
-    titleList.innerHTML = titleList.innerHTML + linkHTML;
+    titleList.insertAdjacentHTML('beforeend', linkHTML);
+
+    /* link html variable */
+    html = html + linkHTML;
+
+    console.log(html);
   }
+
+titleList.innerHTML = html;
+
 }
 
 const titleClickHandler = function(event) {
