@@ -10,6 +10,10 @@ function generateTitleLinks() {
   /* remove titles */
   const titleList = document.querySelector(optTitleListSelector);
   titleList.innerHTML = '';
+
+  /* for each article */
+  const articles = document.querySelectorAll(optArticleSelector);
+  console.log(articles);
 }
 
 const titleClickHandler = function(event) {
