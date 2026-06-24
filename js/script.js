@@ -1,5 +1,9 @@
 'use strict';
 
+const optArticleSelector = '.post';
+const optTitleSelector = '.post-title';
+const optTitleListSelector = '.titles';
+
 const titleClickHandler = function(event) {
   event.preventDefault();
 
@@ -41,6 +45,6 @@ activeArticle.classList.remove('active');
 
 const links = document.querySelectorAll('.titles a');
 
-for (const link of links) {
+for (let link of links) {
   link.addEventListener('click', titleClickHandler);
 }
