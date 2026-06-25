@@ -3,6 +3,7 @@
 const optArticleSelector = '.post';
 const optTitleSelector = '.post-title';
 const optTitleListSelector = '.titles';
+const optArticleTagsSelector = '.post-tags .list';
 
 function generateTitleLinks() {
   console.log('generateTitleLinks was run');
