@@ -29,9 +29,6 @@ function generateTitleLinks() {
     /* create HTML link */
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + title + '</span></a></li>';
 
-    /* link into title */
-    titleList.insertAdjacentHTML('beforeend', linkHTML);
-
     /* link html variable */
     html = html + linkHTML;
 
